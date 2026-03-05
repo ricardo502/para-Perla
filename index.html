@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para alguien especial</title>
+    <style>
+        body {
+            /* Degradado suave para el fondo */
+            background: linear-gradient(135deg, #fdf2f2 0%, #fae1e1 100%);
+            font-family: 'Georgia', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #5a1a1a;
+            text-align: center;
+            overflow: hidden; /* Para que los corazones que caen no salgan de la pantalla */
+        }
+
+        /* Lluvia de corazones (estilos mejorados) */
+        .heart-bg {
+            position: absolute;
+            /* Color más fuerte y tamaño más grande */
+            color: rgba(231, 76, 60, 0.4); 
+            font-size: 35px; /* Corazones notablemente más grandes */
+            user-select: none;
+            z-index: 0;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-10vh) rotate(0deg); }
+            100% { transform: translateY(110vh) rotate(360deg); }
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px 30px;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(214, 51, 132, 0.15);
+            max-width: 350px;
+            width: 90%;
+            position: relative;
+            z-index: 1;
+            border: 2px solid #fce4ec;
+        }
+
+        h1 { font-size: 26px; color: #d63384; margin-bottom: 5px; }
+        .sub { font-size: 14px; color: #888; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }
+        
+        p { line-height: 1.6; font-style: italic; font-size: 18px; margin-bottom: 30px; color: #4a4a4a; }
+        
+        .main-heart { color: #e74c3c; font-size: 60px; animation: beat 1.2s infinite; margin-bottom: 10px; }
+        
+        .btn-youtube {
+            background-color: #ff0000;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+            font-family: sans-serif;
+        }
+
+        .btn-youtube:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.5);
+        }
+
+        .footer-note {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #d63384;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        @keyframes beat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="heart-bg" style="left: 10%; animation-duration: 5s;">❤</div>
+<div class="heart-bg" style="left: 30%; animation-duration: 7s;">❤</div>
+<div class="heart-bg" style="left: 50%; animation-duration: 6s;">❤</div>
+<div class="heart-bg" style="left: 70%; animation-duration: 8s;">❤</div>
+<div class="heart-bg" style="left: 90%; animation-duration: 5.5s;">❤</div>
+
+<div class="container">
+    <div class="main-heart">❤</div>
+    <h1>Para mi Chiquilla...</h1>
+    <div class="sub">Te decido esta cansion con todo mi corazon</div>
+    
+    <p>"¿Cuánto me cuesta que me quieras un poquito?<br>
+    Tengo 5 pesos te sirven?"</p>
+    
+    <a href="https://youtu.be/NjWYEeB890c?si=0pHZ6pHZgaIZVGK3" target="_blank" class="btn-youtube">
+        ▶ ESCUCHAR AHORA
+    </a>
+    
+    <div class="footer-note" onclick="alert('Te ves hermosa hoy. Sonríe, te dedico esta canción porque te lo mereces.')">
+        Toca aquí, tengo un secreto...
+    </div>
+</div>
+
+</body>
+</html>
